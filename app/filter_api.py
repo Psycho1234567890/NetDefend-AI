@@ -16,6 +16,7 @@ CORS(app)  # Allows frontend to call this API
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # E:\NetDefend AI
 MODELS_DIR = os.path.join(BASE_DIR, 'models')
 OUTPUT_DIR = os.path.join(BASE_DIR, 'outputs')
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Create outputs folder if it doesn't exist
 os.makedirs(OUTPUT_DIR, exist_ok=True)
