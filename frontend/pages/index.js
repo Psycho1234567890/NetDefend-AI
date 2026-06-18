@@ -32,7 +32,8 @@ export default function Home() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:5001/api/filter', formData, {
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://netdefend-ai-backend.onrender.com';
+const response = await axios.post(`${API_URL}/api/filter`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

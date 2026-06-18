@@ -78,9 +78,10 @@ export default function Results() {
 
   const allRows = activeTab === 'attacks' ? attacks : normal;
 
-  const downloadFile = (url) => {
-    window.open(`http://localhost:5001${url}`, '_blank');
-  };
+const downloadFile = (url) => {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://netdefend-ai-backend.onrender.com';
+  window.open(`${API_URL}${url}`, '_blank');
+};
 
   return (
     <>
